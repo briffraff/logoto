@@ -1,15 +1,23 @@
-title: Logoto!
+title: Logoto
 email: briffraff6@gmail.com
 description: It is a site for logo design!
-baseurl: "/logotoApp/"
+baseurl: "/logoto"
 url: ""
-nickname: riffraff
-github_username: briffraff
+
+global:
+  nickname: riffraff
+  github_username: briffraff
 
 # Build settings
 theme: minima
+
 plugins:
   - jekyll-feed
+  - jekyll-coffeescript
+
+#sass:
+#  style: compressed
+#  sass_dir: _sass
 
 # exclude:
 #   - .sass-cache/

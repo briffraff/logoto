@@ -1,0 +1,13 @@
+//@import "../../_scss/reset";
+@import "../../_scss/variables";
+@import "../../_scss/functions";
+@import "../../_scss/mixins";
+@import "../../_scss/typography";
+@import "../../_scss/header";
+@import "../../_scss/content";
+@import "../../_scss/footer";
+
+body {
+  padding: 0;
+  margin: auto 2em;
+}

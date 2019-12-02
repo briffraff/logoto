@@ -1,0 +1,37 @@
+header {
+  padding: 0;
+  margin: 0;
+  height: 80px;
+  background-color: red;
+}
+header p {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 20vh;
+  height: auto;
+}
+main p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  background-color: yellowgreen;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: auto 2em;
+}
+
+/*# sourceMappingURL=styles.css.map */
