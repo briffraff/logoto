@@ -2,6 +2,6 @@ main {
   grid-area: logoto-main;
 
   @include flex-center;
-  background-color: #c1cd59;
+  background-color: #777;
   color: getColor(text-primary);
 }

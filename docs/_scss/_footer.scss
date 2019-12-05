@@ -2,6 +2,6 @@ footer {
   grid-area: logoto-footer;
 
   @include flex-center;
-  background-color: yellowgreen;
+  background-color: getColor(text-secondary);
   color: getColor(text-primary);
 }

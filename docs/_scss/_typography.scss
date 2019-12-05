@@ -1,4 +1,12 @@
 header, main, footer {
   font-family: Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+header {
+  .site-logo {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
 }

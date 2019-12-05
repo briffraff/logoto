@@ -14,27 +14,71 @@ html {
 
 header, main, footer {
   font-family: Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+header .site-logo {
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 body .logoto-site-wrapper {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 10% auto 25%;
-  grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
-  grid-gap: 15px;
+  grid-template-columns: 5% auto;
+  grid-template-rows: 14% auto 25%;
+  grid-template-areas: "line logoto-header" "line logoto-main" "line logoto-footer";
   background-color: #333;
 }
+body .logoto-site-wrapper .hr-line {
+  grid-area: line;
+  background-color: #aa0b2d;
+}
 
-header {
+header, main, footer {
+  padding: 0 5em;
+}
+
+.logoto-site-wrapper header {
   grid-area: logoto-header;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   background-color: #555;
   color: white;
+}
+.logoto-site-wrapper header .site-logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 5em;
+  width: 13rem;
+  height: auto;
+}
+.logoto-site-wrapper header .site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+.logoto-site-wrapper header .site-nav a {
+  text-align: right;
+  padding: 0.5em;
+  margin-left: 1em;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #efe3e7;
+  width: 120px;
+}
+.logoto-site-wrapper header .site-nav a:hover {
+  transition: background-color 0.5s ease;
+  background-color: #aa0b2d;
+  vertical-align: middle;
 }
 
 main {
@@ -42,7 +86,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c1cd59;
+  background-color: #777;
   color: white;
 }
 
@@ -51,7 +95,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellowgreen;
+  background-color: black;
   color: white;
 }
 

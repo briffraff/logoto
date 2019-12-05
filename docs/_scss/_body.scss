@@ -3,10 +3,10 @@ body {
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% auto 25%;
-    grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
-    grid-gap: 15px;
+    grid-template-columns: 5% auto;
+    grid-template-rows: 14% auto 25%;
+    grid-template-areas: "line logoto-header" "line logoto-main" "line logoto-footer";
+    //grid-gap: 5px;
 
     //@include flat-elements;
     background-color: getColor(bg-secondary3);
@@ -14,5 +14,20 @@ body {
     //p {
     //  @include flat-elements;
     //}
+
+    .hr-line {
+      grid-area: line;
+      background-color: getColor(logo-secondary);
+
+
+    }
   }
+
+
 }
+
+header, main, footer {
+  padding: 0 5em;
+}
+
+
