@@ -1,0 +1,18 @@
+body {
+  .logoto-site-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% auto 25%;
+    grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
+    grid-gap: 15px;
+
+    //@include flat-elements;
+    background-color: getColor(bg-secondary3);
+
+    //p {
+    //  @include flat-elements;
+    //}
+  }
+}

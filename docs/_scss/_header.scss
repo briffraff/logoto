@@ -1,11 +1,8 @@
 header {
-  padding: 0;
-  margin: 0;
-  height: 80px;
-  background-color: red;
+  grid-area: logoto-header;
 
-  p {
-    padding: 0;
-    margin: 0;
-  }
+  @include flex-center;
+  background-color: getColor(bg-secondary5);
+  color: getColor(text-primary);
+
 }

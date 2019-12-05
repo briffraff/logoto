@@ -1,37 +1,58 @@
-header {
+* {
   padding: 0;
   margin: 0;
-  height: 80px;
-  background-color: red;
 }
-header p {
-  padding: 0;
-  margin: 0;
+
+html {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header, main, footer {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+body .logoto-site-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% auto 25%;
+  grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
+  grid-gap: 15px;
+  background-color: #333;
+}
+
+header {
+  grid-area: logoto-header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+  color: white;
 }
 
 main {
-  min-height: 20vh;
-  height: auto;
-}
-main p {
-  padding: 0;
-  margin: 0;
+  grid-area: logoto-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1cd59;
+  color: white;
 }
 
 footer {
-  padding: 0;
-  margin: 0;
-  height: 200px;
+  grid-area: logoto-footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: yellowgreen;
-}
-footer p {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  padding: 0;
-  margin: auto 2em;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
