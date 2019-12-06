@@ -4,99 +4,220 @@
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 header, main, footer {
   font-family: Helvetica, sans-serif;
   line-height: 1.2;
-  font-size: 15px;
-}
-
-header .site-logo {
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 
 body .logoto-site-wrapper {
   width: 100%;
   height: 100vh;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 5% auto;
-  grid-template-rows: 14% auto 25%;
-  grid-template-areas: "line logoto-header" "line logoto-main" "line logoto-footer";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 14% auto 25%;
+      grid-template-rows: 14% auto 25%;
+      grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
   background-color: #333;
 }
-body .logoto-site-wrapper .hr-line {
-  grid-area: line;
-  background-color: #aa0b2d;
+
+.site-login-bg,
+header,
+footer {
+  padding: 0 20em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header, main, footer {
-  padding: 0 5em;
-}
-
-.logoto-site-wrapper header {
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: logoto-header;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #555;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #111;
   color: white;
 }
-.logoto-site-wrapper header .site-logo img {
+
+header .site-logo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin-top: 5em;
   width: 13rem;
   height: auto;
+  z-index: 5000;
 }
-.logoto-site-wrapper header .site-nav {
+
+header .site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1em;
 }
-.logoto-site-wrapper header .site-nav a {
+
+header .site-nav a {
   text-align: right;
   padding: 0.5em;
   margin-left: 1em;
-  border-radius: 3px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   color: #efe3e7;
   width: 120px;
 }
-.logoto-site-wrapper header .site-nav a:hover {
+
+header .site-nav a:hover {
+  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #aa0b2d;
   vertical-align: middle;
 }
 
 main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: logoto-main;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #777;
   color: white;
+  height: 100%;
+}
+
+main .logoto-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 61%;
+  opacity: 0.9;
+  background-color: #6b8f22;
+}
+
+main .nba {
+  font-size: 35px;
+}
+
+main .site-login {
+  width: 40%;
+  height: auto;
+  z-index: 1000;
+}
+
+main .site-login img {
+  width: 200px;
+  height: auto;
+  opacity: 15;
+  padding-left: 37%;
+}
+
+main .site-login .site-welcome {
+  margin-top: 40px;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5em;
+  color: whitesmoke;
+}
+
+main .site-login .logoto-sub-head {
+  font-size: 15px;
+  text-align: center;
+  padding: 0.5em;
+  letter-spacing: 8px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+main .site-login section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 3em 0;
+}
+
+main .site-login section p {
+  margin-top: 17px;
+}
+
+main .site-login section .login,
+main .site-login section .register {
+  text-align: right;
+  width: 180px;
+  background-color: #333;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  padding: 0.2em;
+  border-radius: 8px;
+}
+
+main .site-login section .login:hover,
+main .site-login section .register:hover {
+  background-color: #006bb7;
 }
 
 footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: logoto-footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: black;
   color: white;
 }
-
 /*# sourceMappingURL=styles.css.map */

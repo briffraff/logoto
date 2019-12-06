@@ -3,9 +3,9 @@ body {
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 5% auto;
+    grid-template-columns: auto;
     grid-template-rows: 14% auto 25%;
-    grid-template-areas: "line logoto-header" "line logoto-main" "line logoto-footer";
+    grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
     //grid-gap: 5px;
 
     //@include flat-elements;
@@ -14,20 +14,12 @@ body {
     //p {
     //  @include flat-elements;
     //}
-
-    .hr-line {
-      grid-area: line;
-      background-color: getColor(logo-secondary);
-
-
-    }
   }
-
-
 }
 
-header, main, footer {
-  padding: 0 5em;
+.site-login-bg,
+header,
+footer {
+  padding: 0 20em;
+  justify-content: center;
 }
-
-
