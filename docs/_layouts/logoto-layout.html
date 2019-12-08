@@ -1,12 +1,15 @@
-{% include top.html %}
+{% include head.html %}
 
-    <body>
-        <div class="logoto-site-wrapper">
-            {% include header.html %}
+<body>
+    <div class="logoto-site-wrapper">
+        {% include header.html %}
 
-            {{ content }}
+        {% include section.html %}
 
-            {% include footer.html %}
-        </div>
-    </body>
+        {{ content }}
+
+        {% include footer.html %}
+    </div>
+</body>
+
 </html>

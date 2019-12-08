@@ -1,42 +1,56 @@
-header {
+.site-header {
+  position: relative;
   grid-area: logoto-header;
-
-  @include flex-center;
-  justify-content: space-between;
-
-  .site-logo {
-    img {
-      @include flex-center;
-      position: relative;
-      margin-top: 5em;
-      width: 13rem;
-      height: auto;
-      z-index: 5000;
-    }
-  }
-
-  .site-nav {
-    @include flex-center;
-    margin: 1em;
-
-    a {
-      text-align: right;
-      padding: 0.5em;
-      margin-left: 1em;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      color: getColor(logo-third);
-      width: 120px;
-    }
-
-    a:hover {
-      transition: background-color 0.5s ease;
-      background-color: getColor(logo-secondary);
-      vertical-align: middle;
-    }
-  }
 
   background-color: getColor(bg-secondary1);
   color: getColor(text-primary);
+
+  .site-wrapper {
+    @include flex-center;
+    justify-content: space-between;
+
+    .site-logo {
+      img {
+        position: relative;
+        width: 13rem;
+        height: auto;
+        z-index: 5000;
+
+        @include bp(phone) {
+          width: 10rem;
+        }
+
+        @include bp(tablet) {
+          width: 8rem;
+        }
+      }
+    }
+
+    .site-nav {
+      @include flex-center;
+      margin-bottom: 6em;
+
+      ul {
+        list-style: none;
+        display: flex;
+        border-radius: 8px;
+      }
+
+      a {
+        width: 120px;
+        text-align: right;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.5em;
+        margin-left: 1em;
+        border-radius: 8px;
+        color: getColor(logo-third);
+      }
+
+      a:hover {
+        transition: background-color 0.5s ease;
+        background-color: getColor(logo-secondary);
+      }
+    }
+  }
 }

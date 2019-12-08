@@ -3,7 +3,7 @@ email: briffraff6@gmail.com
 description: It is a site for logo design!
 baseurl: "/logoto"
 url: ""
-
+#destination: docs
 global:
   nickname: riffraff
   github_username: briffraff

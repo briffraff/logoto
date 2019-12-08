@@ -4,22 +4,18 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 14% auto 25%;
-    grid-template-areas: "logoto-header" "logoto-main" "logoto-footer";
+    grid-template-rows: 14% auto auto 25%;
+    grid-template-areas: "logoto-header" "logoto-section" "logoto-main" "logoto-footer";
     //grid-gap: 5px;
 
-    //@include flat-elements;
     background-color: getColor(bg-secondary3);
 
-    //p {
-    //  @include flat-elements;
-    //}
   }
 }
 
-.site-login-bg,
-header,
-footer {
-  padding: 0 20em;
-  justify-content: center;
+.site-wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
