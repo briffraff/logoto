@@ -15,7 +15,6 @@
   font-size: 1.6em;
   padding-top: 2rem;
   padding-bottom: 5rem;
-
 }
 
 .site-media:before {
@@ -23,6 +22,7 @@
   content: '';
   opacity: 0.9;
   background-color: getColor(bg-green);
+  // background-color: rgb(15, 16, 19);
   position: absolute;
   top: 0;
   left: 0;

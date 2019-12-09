@@ -4,12 +4,29 @@
             <img src="{{site.baseurl}}/assets/images/logo.png" alt="WBL">
         </div>
 
-        <nav class="site-nav">
-            {% if page.title == 'Home' %}
-                <a href="#">login</a>
-                <a href="#">register</a>
+        {% if page.title == 'Home' %}
+            {% if page.log-status == 'logout' %}
+                <nav class="site-nav">
+                    {% if page.title == 'Home' %}
+                        <a href="#">login</a>
+                        <p>|</p>
+                        <a href="#">register</a>
+                        <p>|</p>
+                    {% endif %}
+                </nav>
             {% endif %}
-        </nav>
+
+            {% if page.log-status == 'login' %}
+                <nav class="site-nav">
+                    {% if page.title == 'Home' %}
+                        <article><a href="#">what is NBA</a><p>|</p></article>
+                        <article><a href="#">NBA Teams</a><p>|</p></article>
+                        <article><a href="#">logout</a><p>|</p></article>
+                    {% endif %}
+                </nav>
+            {% endif %}
+        {% endif %}
+
 
     </div>
 </header>

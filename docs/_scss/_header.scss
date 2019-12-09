@@ -8,6 +8,11 @@
   .site-wrapper {
     @include flex-center;
     justify-content: space-between;
+    
+    @include bp(phone) {
+      display: flex;
+      align-items: center;
+    }
 
     .site-logo {
       img {
@@ -17,6 +22,7 @@
         z-index: 5000;
 
         @include bp(phone) {
+          margin-top: -5em;
           width: 10rem;
         }
 
@@ -30,10 +36,14 @@
       @include flex-center;
       margin-bottom: 6em;
 
-      ul {
-        list-style: none;
-        display: flex;
-        border-radius: 8px;
+      @include bp(phone) {
+        flex-direction: column;
+        margin-top: 2em;
+      }
+
+      article {
+          display: flex;
+          align-items: center;
       }
 
       a {
