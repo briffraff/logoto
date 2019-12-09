@@ -5,7 +5,7 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 14% auto auto 25%;
-    grid-template-areas: "logoto-header" "logoto-section" "logoto-main" "logoto-footer";
+    grid-template-areas: "logoto logoto-header" "logoto-section logoto-section" "logoto-main logoto-main" "logoto-footer logoto-footer";
     //grid-gap: 5px;
 
     background-color: getColor(bg-secondary3);
@@ -19,3 +19,4 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+

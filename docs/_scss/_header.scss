@@ -1,44 +1,17 @@
 .site-header {
-  position: relative;
   grid-area: logoto-header;
+  @include flex-center;
 
   background-color: getColor(bg-secondary1);
   color: getColor(text-primary);
 
   .site-wrapper {
-    @include flex-center;
-    justify-content: space-between;
     
-    @include bp(phone) {
-      display: flex;
-      align-items: center;
-    }
-
-    .site-logo {
-      img {
-        position: relative;
-        width: 13rem;
-        height: auto;
-        z-index: 5000;
-
-        @include bp(phone) {
-          margin-top: -5em;
-          width: 10rem;
-        }
-
-        @include bp(tablet) {
-          width: 8rem;
-        }
-      }
-    }
-
     .site-nav {
       @include flex-center;
-      margin-bottom: 6em;
 
       @include bp(phone) {
         flex-direction: column;
-        margin-top: 2em;
       }
 
       article {
@@ -61,6 +34,28 @@
         transition: background-color 0.5s ease;
         background-color: getColor(logo-secondary);
       }
+    }
+  }
+}
+
+.site-logo {
+  grid-area: logoto;
+  background-color: getColor(bg-secondary1);
+  padding-left: 30%;
+
+  img {
+    position: relative;
+    width: 13rem;
+    height: auto;
+    z-index: 5000;
+
+    @include bp(phone) {
+      padding-top: 1em;
+      width: 10rem;
+    }
+
+    @include bp(tablet) {
+      width: 8rem;
     }
   }
 }

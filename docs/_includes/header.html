@@ -1,17 +1,15 @@
+<div class="site-logo">
+    <img src="{{site.baseurl}}/assets/images/logo.png" alt="WBL">
+</div>
+
 <header class="site-header">
     <div class="site-wrapper">
-        <div class="site-logo">
-            <img src="{{site.baseurl}}/assets/images/logo.png" alt="WBL">
-        </div>
-
         {% if page.title == 'Home' %}
             {% if page.log-status == 'logout' %}
                 <nav class="site-nav">
                     {% if page.title == 'Home' %}
-                        <a href="#">login</a>
-                        <p>|</p>
-                        <a href="#">register</a>
-                        <p>|</p>
+                        <article><a href="#">login</a><p>|</p></article>
+                        <article><a href="#">register</a><p>|</p></article>
                     {% endif %}
                 </nav>
             {% endif %}
@@ -26,7 +24,5 @@
                 </nav>
             {% endif %}
         {% endif %}
-
-
     </div>
 </header>
