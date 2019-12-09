@@ -1,7 +1,7 @@
 $breakpoints: (
-        'phone':      ( max-width:  600px ),
-        'tablet':     ( max-width:  900px ),
-        'desktop':    ( min-width: 1025px ),
+        'phone':      ( max-width:  576px ),
+        'tablet':     ( max-width:  992px ),
+        'desktop':    ( min-width: 1200px ),
 ) !default;
 
 @mixin bp($breakpoint) {

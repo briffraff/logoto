@@ -1,7 +1,130 @@
-footer {
+.site-footer {
   grid-area: logoto-footer;
 
-  @include flex-center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: auto;
+
+  font-size: 12px;
   background-color: getColor(text-secondary);
   color: getColor(text-primary);
+
+  @include bp(phone) {
+    font-size: 9px;
+  }
+
+  .site-wrapper {
+    display: flex;
+    justify-content: space-between;
+    // background-color: green;
+    margin-top: -50px;
+
+    @include bp(phone) {
+      margin-top: 2em;
+      flex-direction: column;
+    }
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+.teams {
+  display: flex;
+  justify-content: space-evenly;
+
+
+  .teams-group {
+    display: flex;
+    flex-direction: column;
+    // background-color: greenyellow;
+
+    a {
+      padding-top: 5px;
+      color: getColor(text-primary);
+      opacity: 0.6;
+      padding: 0 5px;
+      margin-top: 5px;
+    }
+
+    a:before {
+      content: "| ";
+      opacity: 0.3;
+    }
+
+    a:hover {
+      opacity: 1;
+      color: getColor(text-primary);
+      background-color: getColor(nba-secondary);
+      border-radius: 5px;
+    }
+  }
+}
+
+.footer-label {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.2;
+}
+
+
+.footer-teams {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  @include bp(phone) {
+    width: 100%;
+  }
+}
+
+.footer-social-icons {
+  width: 30%;
+  display: block;
+  justify-content: space-between;
+  flex-direction: column;
+  // background-color: greenyellow;
+
+  @include bp(phone) {
+    width: 100%;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+
+    @include bp(phone) {
+      margin-top: 1px;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.btn:hover {
+  background-color: getColor(nba-secondary);
+}
+
+.btn-outline {
+  border: 0.125rem solid rgb(70, 70, 70);
+}
+
+.btn-social {
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: getColor(text-primary);
+  background-color: rgb(39, 39, 39);
 }
