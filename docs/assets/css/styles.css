@@ -77,8 +77,8 @@ body .logoto-site-wrapper {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  -ms-grid-rows: 12% auto auto 30%;
-      grid-template-rows: 12% auto auto 30%;
+  -ms-grid-rows: 12% auto auto 1fr;
+      grid-template-rows: 12% auto auto 1fr;
       grid-template-areas: "logoto logoto-header" "logoto-section logoto-section" "logoto-main logoto-main" "logoto-footer logoto-footer";
   background-color: #333;
 }
@@ -193,7 +193,7 @@ body .logoto-site-wrapper {
 
 .site-media .site-wrapper {
   width: 100%;
-  color: #FFF;
+  color: #fff;
   position: relative;
   z-index: 10;
   font-size: 1.6em;
@@ -203,9 +203,9 @@ body .logoto-site-wrapper {
 
 .site-media:before {
   display: block;
-  content: '';
-  opacity: 0.9;
-  background-color: #6b8f22;
+  content: "";
+  opacity: 0.8;
+  background-color: #0f1013;
   position: absolute;
   top: 0;
   left: 0;
@@ -350,10 +350,10 @@ body .logoto-site-wrapper {
 .site-media .site-login .log-reg .login,
 .site-media .site-login .log-reg .register {
   text-align: right;
-  width: 180px;
-  background-color: #333;
+  width: 150px;
+  background-color: #555;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   padding: 0.2em;
   border-radius: 8px;
@@ -384,6 +384,79 @@ body .logoto-site-wrapper {
 .site-media .site-login .log-reg .login:hover,
 .site-media .site-login .log-reg .register:hover {
   background-color: #006bb7;
+}
+
+.section-info-panel {
+  margin: 0.5em 0;
+  width: 45%;
+  height: auto;
+  z-index: 1000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .section-info-panel {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-info-panel {
+    width: 70%;
+  }
+}
+
+.info-slogan {
+  margin-top: 40px;
+  font-size: 100px;
+  text-align: right;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .info-slogan {
+    margin-top: 45px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .info-slogan {
+    margin-top: 45px;
+    font-size: 40px;
+  }
+}
+
+.info-subslogan {
+  font-size: 16px;
+  text-align: right;
+  padding: 0.5em;
+  letter-spacing: 8px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-top: -30px;
+  background-color: rgba(0, 107, 183, 0.3);
+}
+
+@media (max-width: 576px) {
+  .info-subslogan {
+    font-size: 14px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .info-subslogan {
+    font-size: 14px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .site-content {
@@ -429,7 +502,6 @@ body .logoto-site-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: -50px;
   width: 100%;
   height: auto;
 }
@@ -468,7 +540,7 @@ body .logoto-site-wrapper {
   color: white;
   opacity: 0.6;
   padding: 0 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .teams .teams-group a:before {
@@ -510,7 +582,7 @@ body .logoto-site-wrapper {
 }
 
 .footer-social-icons {
-  width: 30%;
+  width: 100%;
   display: block;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -537,7 +609,7 @@ body .logoto-site-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
+  margin-top: 15px;
 }
 
 @media (max-width: 576px) {
@@ -574,5 +646,81 @@ body .logoto-site-wrapper {
   font-size: 0.9rem;
   color: white;
   background-color: #272727;
+}
+
+.footer-social-subscribe {
+  width: 25%;
+  margin-right: -40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .footer-social-subscribe {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.footer-subscribe-form {
+  display: block;
+  margin-top: 35px;
+}
+
+.footer-subscribe-form .subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-subscribe-form .subscribe input[type="email"] {
+  height: 2em;
+  width: 75%;
+  margin-top: 15px;
+  border: 1px solid #bec1c5;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #272727;
+  color: white;
+  padding-left: 15px;
+}
+
+@media (max-width: 576px) {
+  .footer-subscribe-form .subscribe input[type="email"] {
+    width: 50%;
+    margin-left: 17%;
+  }
+}
+
+.footer-subscribe-form .subscribe input[type="email"]:focus {
+  border-color: #006bb7;
+}
+
+.footer-subscribe-form .subscribe input[type="submit"] {
+  height: 2.15em;
+  width: auto;
+  margin: 0 0.3em;
+  padding: 0 0.3em;
+  margin-top: 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: white;
+  border: 1px solid #aa0b2d;
+  border-radius: 5px;
+  background-color: #aa0b2d;
+}
+
+.footer-subscribe-form .subscribe input[type="submit"]:focus {
+  border-color: #aa0b2d;
+}
+
+.footer-subscribe-form .subscribe input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #d94364;
 }
 /*# sourceMappingURL=styles.css.map */

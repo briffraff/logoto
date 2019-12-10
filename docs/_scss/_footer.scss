@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     // background-color: green;
-    margin-top: -50px;
+    // margin-top: -50px;
 
     @include bp(phone) {
       margin-top: 2em;
@@ -35,7 +35,6 @@
   display: flex;
   justify-content: space-evenly;
 
-
   .teams-group {
     display: flex;
     flex-direction: column;
@@ -46,7 +45,7 @@
       color: getColor(text-primary);
       opacity: 0.6;
       padding: 0 5px;
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     a:before {
@@ -69,7 +68,6 @@
   opacity: 0.2;
 }
 
-
 .footer-teams {
   width: 60%;
   display: flex;
@@ -82,7 +80,7 @@
 }
 
 .footer-social-icons {
-  width: 30%;
+  width: 100%;
   display: block;
   justify-content: space-between;
   flex-direction: column;
@@ -91,12 +89,12 @@
   @include bp(phone) {
     width: 100%;
   }
-  
+
   .social-icons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 15px;
 
     @include bp(phone) {
       margin-top: 1px;
@@ -127,4 +125,67 @@
   font-size: 0.9rem;
   color: getColor(text-primary);
   background-color: rgb(39, 39, 39);
+}
+
+.footer-social-subscribe {
+  width: 25%;
+  margin-right: -40px;
+  display: flex;
+  flex-direction: column;
+
+  @include bp(phone) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.footer-subscribe-form {
+  display: block;
+  margin-top: 35px;
+
+  .subscribe {
+    display: flex;
+
+    input[type="email"] {
+      height: 2em;
+      width: 75%;
+      margin-top: 15px;
+      border: 1px solid #bec1c5;
+      transition: all 0.4s;
+      background-color: rgb(39, 39, 39);
+      color: getColor(text-primary);
+      padding-left: 15px;
+
+      @include bp(phone) {
+        width: 50%;
+        margin-left: 17%;
+      }
+
+      &:focus {
+        border-color: getColor(nba-primary);
+      }
+    }
+
+    input[type="submit"] {
+      height: 2.15em;
+      width: auto;
+      margin: 0 0.3em;
+      padding: 0 0.3em;
+      margin-top: 15px;
+      transition: all 0.4s;
+      color: getColor(text-primary);
+      border: 1px solid getColor(logo-secondary);
+      border-radius: 5px;
+      background-color: getColor(logo-secondary);
+
+      &:focus {
+        border-color: getColor(logo-secondary);
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: getColor(logo-primary);
+      }
+    }
+  }
 }

@@ -1,32 +1,41 @@
 <section class="site-media" style="background-image: url('{{site.baseurl}}{{page.wall_image}}');">
-    
+
     {% if page.title == 'Home' %}
+
         {% if page.log-status == 'logout' %}
-            <section class="site-login">
-                <h1 class="site-welcome">Thank you for choosing logos.nba !</h1>
-                <h4 class="logoto-sub-head">You can find everything for</h4>
-                <img class="nba" src="{{site.baseurl}}/assets/images/nba.png" alt="">
-                <p class="logoto-sub-head">Teams</p>
-                <section class="log-reg">
-                    <p>You are not registered user ?</p>
-                    <a href="#" class="login">login</a>
-                    <p>|</p>
-                    <a href="#" class="register">register</a>
-                    <hr>
-                </section>
+        <section class="site-login">
+            <h1 class="site-welcome">Thank you for choosing logos.nba !</h1>
+            <h4 class="logoto-sub-head">You can find everything for</h4>
+            <img class="nba" src="{{site.baseurl}}/assets/images/nba.png" alt="">
+            <p class="logoto-sub-head">Teams</p>
+            <section class="log-reg">
+                <p>You are not registered user ?</p>
+                <a href="#" class="login">login</a>
+                <p>|</p>
+                <a href="#" class="register">register</a>
+                <hr>
             </section>
+        </section>
         {% endif %}
 
         {% if page.log-status == 'login' %}
-            <section class="site-login" style="margin-top: 6em">
-                <h1 class="site-welcome">Welcome, to the World of Basketball</h1>
-                <h4 class="logoto-sub-head">You can find everything for</h4>
-                <img class="nba" src="{{site.baseurl}}/assets/images/nba.png" alt="">
-                <p class="logoto-sub-head">Teams</p>
-                <section class="log-reg">
-                </section>
+        <section class="site-login">
+            <h1 class="site-welcome">{{page.page-slogan}}</h1>
+            <h4 class="logoto-sub-head">{{page.sub-slogan}}</h4>
+            <img class="nba" src="{{site.baseurl}}/assets/images/nba.png" alt="">
+            <p class="logoto-sub-head">Teams</p>
+            <section class="log-reg">
             </section>
+        </section>
         {% endif %}
+
+    {% elsif page.title != 'Home' %}
+        <section class="section-info-panel">
+            <h1 class="info-slogan">{{page.page-slogan}}</h1>
+            <p class="info-subslogan">{{page.sub-slogan}}</p>
+            <!-- <section class="log-reg">
+            </section> -->
+        </section>
     {% endif %}
 
 </section>

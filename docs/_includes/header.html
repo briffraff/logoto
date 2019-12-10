@@ -7,22 +7,25 @@
         {% if page.title == 'Home' %}
             {% if page.log-status == 'logout' %}
                 <nav class="site-nav">
-                    {% if page.title == 'Home' %}
                         <article><a href="#">login</a><p>|</p></article>
                         <article><a href="#">register</a><p>|</p></article>
-                    {% endif %}
                 </nav>
             {% endif %}
-
+        
             {% if page.log-status == 'login' %}
                 <nav class="site-nav">
-                    {% if page.title == 'Home' %}
                         <article><a href="#">what is NBA</a><p>|</p></article>
                         <article><a href="#">NBA Teams</a><p>|</p></article>
                         <article><a href="#">logout</a><p>|</p></article>
-                    {% endif %}
                 </nav>
             {% endif %}
+        
+        {% elsif page.title != 'Home' %}
+            <nav class="site-nav">
+                <article><a href="#">what is NBA</a><p>|</p></article>
+                <article><a href="#">NBA Teams</a><p>|</p></article>
+                <article><a href="#">logout</a><p>|</p></article>
+          </nav>
         {% endif %}
     </div>
 </header>
