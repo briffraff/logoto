@@ -464,8 +464,65 @@ body .logoto-site-wrapper {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: logoto-main;
-  background-color: red;
-  height: 150px;
+  height: auto;
+  color: white;
+  background-color: #111;
+}
+
+.site-content .site-wrapper {
+  height: auto;
+  padding-bottom: 3em;
+}
+
+.site-content .site-wrapper p {
+  padding: 1.2em 0;
+}
+
+.mini-wall {
+  width: 100%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.story-title {
+  width: 450px;
+  margin-top: 1em;
+  margin-left: 18.5%;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #006bb7;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: 5px solid white;
+}
+
+@media (max-width: 576px) {
+  .story-title {
+    margin-left: 5%;
+  }
+}
+
+.transparent-text {
+  text-align: center;
+  margin-left: 18%;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+}
+
+@media (max-width: 576px) {
+  .transparent-text {
+    margin-left: 5%;
+  }
 }
 
 .site-footer {
@@ -502,13 +559,16 @@ body .logoto-site-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 60px;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 576px) {
   .site-footer .site-wrapper {
-    margin-top: 2em;
+    margin-top: 20px;
+    margin-bottom: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -523,6 +583,13 @@ body .logoto-site-wrapper {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-left: -25px;
+}
+
+@media (max-width: 576px) {
+  .teams {
+    margin-left: 0;
+  }
 }
 
 .teams .teams-group {

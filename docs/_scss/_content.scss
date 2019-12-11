@@ -1,5 +1,67 @@
 .site-content {
   grid-area: logoto-main;
-  background-color: red;
-  height: 150px;
+
+  height: auto;
+
+  .site-wrapper {
+    height: auto;
+    // margin-left: 23em;
+    // margin-right: 23em;
+
+    padding-bottom: 3em;
+
+    p {
+      padding: 1.2em 0;
+    }
+  }
+  color: getColor(text-primary);
+  background-color: getColor(bg-secondary1);
+}
+
+.content-imaga {
+}
+
+.mini-wall {
+  width: 100%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.story-title {
+  width: 450px;
+  margin-top: 1em;
+  margin-left: 18.5%;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor(nba-primary);
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  border-left: 5px solid getColor(text-primary);
+
+  @include bp(phone) {
+    margin-left: 5%;
+  }
+}
+
+.transparent-text {
+  text-align: center;
+  margin-left: 18%;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  width: 450px;
+  color: getColor(bg-secondary);
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  opacity: 0.3;
+
+  @include bp(phone) {
+    margin-left: 5%;
+  }
+
 }
