@@ -1,0 +1,27 @@
+---
+title: Logout
+layout: layout
+permalink: /logout
+log-status: logout
+wall_image: /assets/images/5ID7fg.jpg
+---
+
+<section class="site-media" style="background-image: url('{{site.baseurl}}{{page.wall_image}}');">
+
+    {% if page.log-status == 'logout' %}
+    <section class="site-login">
+        <h1 class="site-welcome">Thank you for choosing logos.nba !</h1>
+        <h4 class="logoto-sub-head">You can find everything for</h4>
+        <img class="nba" src="{{site.baseurl}}/assets/images/nba.png" alt="">
+        <p class="logoto-sub-head">Teams</p>
+        <section class="log-reg">
+            <p>You are not registered user ?</p>
+            <a href="{{site.baseurl}}/login/" class="login">login</a>
+            <p>|</p>
+            <a href="{{site.baseurl}}/register/" class="register">register</a>
+            <hr>
+        </section>
+    </section>
+    {% endif %}
+
+</section>

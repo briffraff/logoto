@@ -1,31 +1,33 @@
 <div class="site-logo">
-    <img src="{{site.baseurl}}/assets/images/logo.png" alt="WBL">
+    <a href="{{site.baseurl}}/">
+        <img src="{{site.baseurl}}/assets/images/logo.png" alt="WBL">
+    </a>
 </div>
 
 <header class="site-header">
     <div class="site-wrapper">
         {% if page.title == 'Home' %}
-            {% if page.log-status == 'logout' %}
-                <nav class="site-nav">
-                        <article><a href="#">login</a><p>|</p></article>
-                        <article><a href="#">register</a><p>|</p></article>
-                </nav>
-            {% endif %}
-        
             {% if page.log-status == 'login' %}
                 <nav class="site-nav">
-                        <article><a href="#">what is NBA</a><p>|</p></article>
-                        <article><a href="#">NBA Teams</a><p>|</p></article>
-                        <article><a href="#">logout</a><p>|</p></article>
+                        <article><a href="{{site.baseurl}}/about-nba/">what is NBA</a><p>|</p></article>
+                        <article><a href="{{site.baseurl}}/teams/">NBA Teams</a><p>|</p></article>
+                        <article><a href="{{site.baseurl}}/logout">logout</a><p>|</p></article>
                 </nav>
             {% endif %}
-        
+
         {% elsif page.title != 'Home' %}
-            <nav class="site-nav">
-                <article><a href="#">what is NBA</a><p>|</p></article>
-                <article><a href="#">NBA Teams</a><p>|</p></article>
-                <article><a href="#">logout</a><p>|</p></article>
-          </nav>
+            {% if page.log-status == 'logout' %}
+                <nav class="site-nav">
+                    <article><a href="{{site.baseurl}}/login/">login</a><p>|</p></article>
+                    <article><a href="{{site.baseurl}}/register/">register</a><p>|</p></article>
+                </nav>
+            {% else %}
+                <nav class="site-nav">
+                    <article><a href="{{site.baseurl}}/about-nba/">what is NBA</a><p>|</p></article>
+                    <article><a href="{{site.baseurl}}/teams/">NBA Teams</a><p>|</p></article>
+                    <article><a href="{{site.baseurl}}/logout">logout</a><p>|</p></article>
+                </nav>
+            {% endif %}
         {% endif %}
     </div>
 </header>

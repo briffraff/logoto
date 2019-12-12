@@ -47,6 +47,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  @include bp(phone){
+    min-height: 25vh;
+  }
 }
 
 article {
@@ -66,7 +70,7 @@ article {
 .story-title {
   width: 550px;
   margin-top: 1em;
-  margin-left: 18.5%;
+  //margin-left: 18.5%;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   letter-spacing: 0.5rem;
@@ -78,7 +82,7 @@ article {
 
   @include bp(phone) {
     width: auto;
-    margin-left: 5%;
+    //margin-left: 5%;
   }
 }
 
