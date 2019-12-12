@@ -487,8 +487,47 @@ body .logoto-site-wrapper {
   position: relative;
 }
 
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .image-container {
+    display: block;
+  }
+}
+
+.imaginary {
+  margin-top: 1.3em;
+  min-height: 41vh;
+  width: 100%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article .about-text {
+  padding-right: 15px;
+}
+
+article .about-logo {
+  margin-top: 15px;
+  padding-left: 15px;
+  height: 25em;
+}
+
 .story-title {
-  width: 450px;
+  width: 550px;
   margin-top: 1em;
   margin-left: 18.5%;
   padding-top: 0.3em;
@@ -503,6 +542,7 @@ body .logoto-site-wrapper {
 
 @media (max-width: 576px) {
   .story-title {
+    width: auto;
     margin-left: 5%;
   }
 }
