@@ -15,6 +15,15 @@ plugins:
   - jekyll-feed
   - jekyll-coffeescript
 
+collections:
+  teams:
+    output: true
+
+collections_dir: collections
+
+#  https://tableconvert.com/?output=json
+#  https://jsonformatter.curiousconcept.com/
+
 #sass:
 #  style: compressed
 #  sass_dir: _sass

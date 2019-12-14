@@ -8,31 +8,77 @@ page-slogan: the Teams
 sub-slogan: all teams into association
 ---
 
+{% assign teams_data = site.data.teams.root.team %}
+{% assign counter = 0 %}
+
 <main class="site-content">
 
-    <div class="mini-wall">
-        <h2 class="story-title">Teams</h2>
-    </div>
-
     <div class="site-wrapper">
+        <div class="mini-wall">
+            <h2 class="story-title">Teams</h2>
+        </div>
+
         <article>
             <div class="about-text">
                 <p>The NBA originated in 1946 with 11 teams, and through a sequence of team expansions, reductions, and
                     relocations, currently consists of 30 teams. The United States is home to 29 teams and one is
                     located in Canada.</p>
-                    <p>The National Basketball Association (NBA) is a men's professional basketball league in North
+                <p>The National Basketball Association (NBA) is a men's professional basketball league in North
                     America,composed of 30 teams (29 in the United States and 1 in Canada).</p>
 
-                   <p>The current league organization divides thirty teams into two conferences of three divisions with
+                <p>The current league organization divides thirty teams into two conferences of three divisions with
                     five teams each. The current divisional alignment was introduced in the 2004–05 season. Reflecting
                     the population distribution of the United States and Canada as a whole, most teams are in the
                     eastern half of the country: thirteen teams are in the Eastern Time Zone, nine in the Central, three
                     in the Mountain, and five in the Pacific.</p>
             </div>
-
-
         </article>
     </div>
+
+    <section class="site-content">
+        <div class="site-wrapper">
+            <div class="teams-container">
+                <div class="teams-container-flexwrap">
+                    {% for team in teams_data %}
+
+                    <div>
+                        {% if counter == 0 %}
+                        <p class="bgblack division-title">Atlantic Division</p>
+
+                        {% elsif counter == 5 %}
+                        <p class="bgblack division-title">Central Division</p>
+
+                        {% elsif counter == 10 %}
+                        <p class="bgblack division-title">Northwest Division</p>
+
+                        {% elsif counter == 15 %}
+                        <p class="bgblack division-title">Pacific Division</p>
+
+                        {% elsif counter == 20 %}
+                        <p class="bgblack division-title">Southeast Division</p>
+
+                        {% elsif counter == 25 %}
+                        <p class="bgblack division-title">Southwest Division</p>
+
+                        {% else %}
+                        <p class="division-title division" style="color: transparent;">-</p>
+
+                        {% endif %}
+
+                        <a href="{{site.baseurl}}{{team.logo}}">
+                            <div class="team-card">
+                                <img src="{{site.baseurl}}{{team.thumbnail}}" alt="">
+                                <p class="card-name">{{ team.name }}</p>
+                            </div>
+                        </a>
+
+                        {% assign counter = counter | plus: 1 %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="mini-wall" style="background-image: url('{{site.baseurl}}{{page.mini-wall}}');">
         <h2 class="transparent-text">I love this game!</h2>

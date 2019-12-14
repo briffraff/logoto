@@ -8,7 +8,7 @@
     // margin-left: 23em;
     // margin-right: 23em;
 
-    padding-bottom: 3em;
+    padding-bottom: 2em;
 
     p {
       padding: 1.2em 0;
@@ -17,7 +17,6 @@
   color: getColor(text-primary);
   background-color: getColor(bg-secondary1);
 }
-
 
 .mini-wall {
   width: 100%;
@@ -28,13 +27,12 @@
   position: relative;
 }
 
-
 .image-container {
-    display: flex;
+  display: flex;
 
-    @include bp(phone) {
-       display: block;
-    }
+  @include bp(phone) {
+    display: block;
+  }
 }
 
 .imaginary {
@@ -48,7 +46,7 @@
   background-repeat: no-repeat;
   position: relative;
 
-  @include bp(phone){
+  @include bp(phone) {
     min-height: 25vh;
   }
 }
@@ -57,7 +55,7 @@ article {
   display: flex;
 
   .about-text {
-    padding-right: 15px;
+    // padding-right: 15px;
   }
 
   .about-logo {
@@ -101,4 +99,74 @@ article {
   @include bp(phone) {
     margin-left: 5%;
   }
+}
+
+.division-title {
+  font-size: 20px;
+
+  @include bp(phone) {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-align: center;
+    color: getColor(nba-primary);
+  }
+}
+
+.division {
+  @include bp(phone) {
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+  }
+}
+
+.bgblack {
+  background-color: rgba($color: black, $alpha: 0.3);
+
+}
+
+.bgblack:before {
+  content: "| ";
+  font-weight: 900;
+  margin-left: 5.5%;
+  color: getColor(nba-primary);
+
+  @include bp(phone) {
+    color: white;
+  }
+}
+
+.teams-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.teams-container-flexwrap {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: #333;
+  margin-top: 5em;
+  margin: 1em;
+  color: white;
+  border-radius: 15px 15px;
+
+  @include bp(phone) {
+
+    margin-top: 1em;
+  }
+}
+
+.card-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
 }
