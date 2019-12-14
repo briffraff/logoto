@@ -5,8 +5,8 @@
 
   .site-wrapper {
     height: auto;
-    // margin-left: 23em;
-    // margin-right: 23em;
+    //margin-left: 23em;
+    //margin-right: 23em;
 
     padding-bottom: 2em;
 
@@ -14,6 +14,7 @@
       padding: 1.2em 0;
     }
   }
+
   color: getColor(text-primary);
   background-color: getColor(bg-secondary1);
 }
@@ -168,5 +169,70 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-
 }
+
+.single-team-container {
+
+  .team-info {
+
+  }
+}
+
+.team-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  margin-top: -5em;
+
+  @include bp(phone) {
+    margin-top: -3em;
+  }
+}
+
+.location {
+  color: getColor(text-primary);
+}
+
+.team-title {
+  font-size: 100px;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColor(text-primary);
+
+  @include bp(phone) {
+    font-size: 40px;
+    margin-top: 45px;
+  }
+
+  @include bp(tablet) {
+    font-size: 60px;
+    margin-top: 45px;
+  }
+}
+
+.team-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    margin-top: -140px;
+
+    width: 50%;
+    height: auto;
+
+    @include bp(phone) {
+      width: 70%;
+    }
+
+  }
+}
+
+.team-info {
+  margin-bottom: 5em;
+}
+

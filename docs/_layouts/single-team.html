@@ -1,0 +1,48 @@
+{% include head.html %}
+
+<body>
+<div class="logoto-site-wrapper">
+    {% include header.html %}
+
+    {% assign teamIdx = page.index | minus: 1 %}
+    {% assign team = site.data.teams.root.team[teamIdx] %}
+
+    <section class="site-media" style="background-image: url('{{site.baseurl}}{{team.logo}}');">
+        <section class="section-info-panel">
+            <h1 class="team-title">{{team.name}}</h1>
+            <div class="mini-wall team-name">
+                <h2 class="story-title">
+                    <a class="location">Location:</a>
+                    {{ team.location }}
+                </h2>
+            </div>
+        </section>
+    </section>
+
+    <main class="site-content">
+        <div class="single-team-container">
+            <div class="site-wrapper">
+
+                <div class="team-logo">
+                    <img src="{{site.baseurl}}{{team.logo}}" alt="{{ team.name }}">
+                </div>
+
+                <article>
+                    <div class="about-text team-info">
+                        {{ team.info }}
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="mini-wall" style="background-image: url('{{site.baseurl}}{{site.game}}');">
+            <h2 class="transparent-text">I love this game!</h2>
+        </div>
+    </main>
+
+    {% include footer.html %}
+</div>
+
+</body>
+
+</html>

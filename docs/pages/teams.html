@@ -9,6 +9,7 @@ sub-slogan: all teams into association
 ---
 
 {% assign teams_data = site.data.teams.root.team %}
+{% assign teams = site.teams %}
 {% assign counter = 0 %}
 
 <main class="site-content">
@@ -37,10 +38,10 @@ sub-slogan: all teams into association
 
     <section class="site-content">
         <div class="site-wrapper">
-            <div class="teams-container">
+            <div class="teams-container team-info">
                 <div class="teams-container-flexwrap">
-                    {% for team in teams_data %}
-
+                    {% for team in teams %}
+                        {% assign teamIdx = team.index | minus: 1 %}
                     <div>
                         {% if counter == 0 %}
                         <p class="bgblack division-title">Atlantic Division</p>
@@ -65,10 +66,10 @@ sub-slogan: all teams into association
 
                         {% endif %}
 
-                        <a href="{{site.baseurl}}{{team.logo}}">
+                        <a href="{{site.baseurl}}{{team.url}}">
                             <div class="team-card">
-                                <img src="{{site.baseurl}}{{team.thumbnail}}" alt="">
-                                <p class="card-name">{{ team.name }}</p>
+                                <img src="{{site.baseurl}}{{teams_data[teamIdx].thumbnail}}" alt="">
+                                <p class="card-name">{{ teams_data[teamIdx].name }}</p>
                             </div>
                         </a>
 
@@ -80,7 +81,7 @@ sub-slogan: all teams into association
         </div>
     </section>
 
-    <div class="mini-wall" style="background-image: url('{{site.baseurl}}{{page.mini-wall}}');">
+    <div class="mini-wall" style="background-image: url('{{site.baseurl}}{{site.game}}');">
         <h2 class="transparent-text">I love this game!</h2>
     </div>
 </main>
