@@ -463,14 +463,23 @@ article {
 .login-box {
   width: 30%;
   position: relative;
-  top: 60%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   background-color: #111;
   padding: 15px;
   border-radius: 8px;
-  margin-bottom: -120px; }
+  margin-bottom: -120px;
+  margin-top: -1%; }
+  @media (max-width: 992px) {
+    .login-box {
+      width: 75%;
+      margin-top: -3%; } }
+  @media (max-width: 576px) {
+    .login-box {
+      width: 75%;
+      margin-top: -5%; } }
   .login-box h1 {
     float: end;
     font-size: 40px;
@@ -514,7 +523,16 @@ article {
   opacity: 0.8; }
 
 .register-box {
-  margin-bottom: -200px; }
+  margin-bottom: -200px;
+  margin-top: -10%; }
+  @media (max-width: 992px) {
+    .register-box {
+      width: 75%;
+      margin-top: -7%; } }
+  @media (max-width: 576px) {
+    .register-box {
+      width: 75%;
+      margin-top: -15%; } }
 
 .site-footer {
   grid-area: logoto-footer;

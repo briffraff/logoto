@@ -233,7 +233,7 @@ article {
 .login-box {
   width: 30%;
   position: relative;
-  top: 60%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
@@ -241,6 +241,19 @@ article {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: -120px;
+  margin-top: -1%;
+
+  @include bp(tablet) {
+    width: 75%;
+    margin-top: -3%;
+  }
+
+  @include bp(phone) {
+    width: 75%;
+    margin-top: -5%;
+  }
+
+
 
   h1 {
     float: end;
@@ -296,6 +309,17 @@ article {
 
 .register-box {
   margin-bottom: -200px;
+  margin-top: -10%;
+
+  @include bp(tablet) {
+    width: 75%;
+    margin-top: -7%;
+  }
+
+  @include bp(phone) {
+    width: 75%;
+    margin-top: -15%;
+  }
 }
 
 
