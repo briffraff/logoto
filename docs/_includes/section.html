@@ -14,11 +14,19 @@
 
     {% elsif page.title != 'Home' %}
         <section class="section-info-panel">
-            <h1 class="info-slogan">{{page.page-slogan}}</h1>
-            <p class="info-subslogan">{{page.sub-slogan}}</p>
+
+            {% if page.title == "Logout" %}
+                <h1 style="background-color: transparent" class="info-slogan">{{page.page-slogan}}</h1>
+                <p style="background-color: transparent" class="info-subslogan">{{page.sub-slogan}}</p>
+            {% else%}
+                <h1 class="info-slogan">{{page.page-slogan}}</h1>
+                <p class="info-subslogan">{{page.sub-slogan}}</p>
+            {% endif %}
+
              <section class="log-reg">
             </section>
         </section>
+
     {% endif %}
 
 
