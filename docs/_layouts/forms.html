@@ -1,0 +1,26 @@
+{% include head.html %}
+
+<body>
+<div class="logoto-site-wrapper">
+    {% include header.html %}
+
+    <section class="site-media" style="background-image: url('{{site.baseurl}}{{page.wall_image}}');">
+
+
+        <section class="site-login">
+            {% if page.title == "Login" %}
+            <img class="nba" style="margin-top: 10%" src="{{site.baseurl}}/assets/images/nba.png" alt="">
+            {% elsif page.title == "Register" %}
+            <img class="nba" style="margin-top: 5%" src="{{site.baseurl}}/assets/images/nba.png" alt="">
+            {% endif %}
+            <p class="logoto-sub-head">Teams</p>
+        </section>
+    </section>
+
+    {{ content }}
+
+    {% include footer.html %}
+</div>
+</body>
+
+</html>
