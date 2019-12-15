@@ -23,6 +23,7 @@ collections_dir: collections
 
 game: "/assets/images/kosh.jpeg"
 
+# JSON CONVERTORs
 #  https://tableconvert.com/?output=json
 #  https://jsonformatter.curiousconcept.com/
 
