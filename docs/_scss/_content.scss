@@ -164,6 +164,10 @@ article {
   }
 }
 
+.team-card:hover {
+  background-color: rgba(getColor(nba-primary),1.0);
+}
+
 .card-name {
   display: flex;
   flex-wrap: wrap;

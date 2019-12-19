@@ -409,6 +409,9 @@ article {
     .team-card {
       margin-top: 1em; } }
 
+.team-card:hover {
+  background-color: #006bb7; }
+
 .card-name {
   display: flex;
   flex-wrap: wrap;
